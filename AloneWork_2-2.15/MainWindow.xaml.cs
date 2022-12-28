@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -49,6 +50,19 @@ namespace AloneWork_2_2._15
         private void ToggleButton_Click_2(object sender, RoutedEventArgs e)
         {
             docViewer.ClearValue(FlowDocumentScrollViewer.DocumentProperty);
+        }
+
+        private void ToggleButton_ClickLike(object sender, RoutedEventArgs e)
+        {
+            ToggleButton button = sender as ToggleButton;
+            if(button.IsChecked==null || button.IsChecked==false)
+            {
+                button_image.Source = new BitmapImage(new Uri(@"Data/нравится-1.png", UriKind.Relative));
+            }
+            else
+            {
+                button_image.Source = new BitmapImage(new Uri(@"Data/нравится-2.png", UriKind.Relative));
+            }
         }
     }
 }

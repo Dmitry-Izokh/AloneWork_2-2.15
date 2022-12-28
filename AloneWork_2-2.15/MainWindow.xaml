@@ -184,7 +184,9 @@
                             </Floater>
                         </Paragraph>
 
-                        <Table>
+                        <Table
+                            Margin="0"
+                            Padding="0">
                             <Table.Columns>
                                 <TableColumn/>
                                 <TableColumn/>
@@ -194,6 +196,7 @@
                                     <TableCell>
                                         <Paragraph                                        
                                         Margin="30 0 0 0 "
+                                        Padding="0"    
                                         FontSize="24"
                                         TextAlignment="Left"
                                         Foreground="LightGray"
@@ -204,6 +207,7 @@
                                     <TableCell>
                                         <Paragraph
                                         Margin="0 0 30 0 "
+                                        Padding="0"
                                         FontSize="24"
                                         TextAlignment="Right"
                                         Foreground="LightGray"
@@ -473,8 +477,14 @@
                                     HorizontalAlignment="Center"                  
                                     BorderBrush="White"
                                     Background="White"
-                                    BorderThickness="0" Click="ToggleButton_Click">
-                                    <Image Source="Data/нравится-1.png" Height="60" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    BorderThickness="0"
+                                    Click="ToggleButton_ClickLike">
+                                    <Image Source="Data/нравится-1.png"
+                                           Height="60" 
+                                           Width="60" 
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           x:Name="button_image"/>
                                 </ToggleButton>
                             </StackPanel>
                         </BlockUIContainer>
